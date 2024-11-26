@@ -16,9 +16,7 @@ def convertir_a_prolog(laberinto):
 def es_laberinto_solucionable(laberinto):
     """Evalúa si el laberinto es solucionable utilizando Prolog."""
     prolog = Prolog()
-    # Carga el archivo Prolog
     prolog.consult("laberinto.pl")
-    # Convierte el laberinto a un formato compatible con Prolog
     laberinto_prolog = convertir_a_prolog(laberinto)
     # Ejecuta la consulta en Prolog
     query = f"solucionable({laberinto_prolog})"
